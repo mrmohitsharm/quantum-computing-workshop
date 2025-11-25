@@ -1,7 +1,10 @@
 .App {
   text-align: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
+/* Logo Animation — keep as it is */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,21 +16,32 @@
   }
 }
 
+/* ⭐ Updated Header Styling */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+
+  /* FIXES the center squeeze issue */
+  justify-content: flex-start; 
+  align-items: flex-start;
+
   font-size: calc(10px + 2vmin);
   color: white;
+
+  /* Better full desktop view */
+  padding: 40px;
+  box-sizing: border-box;
 }
 
+/* Link Style */
 .App-link {
   color: #61dafb;
 }
 
+/* Animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
