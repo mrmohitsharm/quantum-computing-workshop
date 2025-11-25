@@ -1,7 +1,9 @@
 import React from "react";
 import "./Hero.css";
 import quantumImg from "../../assets/quantum.png";
-import bgImage from "../../images/bacg.png"; // background image here
+import bgImage from "../../images/bacg.png";
+import { Link } from "react-router-dom"; 
+
 
 export default function Hero() {
   return (
@@ -19,7 +21,10 @@ export default function Hero() {
           skills that open up new opportunities.
         </p>
 
-        <button className="cta-btn">Get Started →</button>
+        
+  <Link to="/Payment">
+  <button className="Paynment">Get Started →</button>
+</Link>
 
         <div className="glow-circle"></div>
       </div>

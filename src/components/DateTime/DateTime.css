@@ -1,13 +1,11 @@
-/* Section layout without background image */
+/* Section layout */
 .date-time-section {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 20px;
 
-  height: 100vh; /* Full page section */
-
-  /* Background image removed from CSS */
+  height: 100vh; /* Full section height */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +14,7 @@
   overflow: hidden;
 }
 
-/* Dark overlay for visibility */
+/* Dark overlay */
 .date-time-section::before {
   content: "";
   position: absolute;
@@ -25,73 +23,109 @@
   z-index: 0;
 }
 
-/* Card container */
+/* Main Card – Bigger + Highlight */
 .date-card {
+  width: 70%;
+  height: 70%;
+  max-width: 1000px;
+  padding: 60px 80px;
+
   display: flex;
   align-items: center;
-  gap: 40px;
-  padding: 30px 50px;
+  justify-content: space-between;
+  gap: 80px;
 
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(8px);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 28px;
+
+  border: 2px solid rgba(0, 255, 255, 0.45);
+  box-shadow: 
+    0 0 50px rgba(0, 255, 255, 0.45),
+    0 0 120px rgba(0, 180, 255, 0.35);
 
   color: #ffffff;
-  box-shadow: 0 0 25px rgba(0, 150, 255, 0.15);
-
   animation: fadeIn 1.2s ease forwards;
   opacity: 0;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 
   position: relative;
   z-index: 2;
 }
 
-/* Hover effect */
+/* Card Hover Effect */
 .date-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 30px rgba(0, 200, 255, 0.4);
+  transform: scale(1.04);
+  box-shadow: 
+    0 0 80px rgba(0, 255, 255, 0.75),
+    0 0 150px rgba(0, 180, 255, 0.5);
 }
 
-/* Left date box */
+/* Left Date Section */
 .date-left {
   text-align: center;
+  width: 40%;
 }
 
+/* Very BIG glowing date */
 .date-number {
-  font-size: 4rem;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+
+  color: #ffffff;
+  text-shadow:
+    0 0 20px rgba(0, 255, 255, 1),
+    0 0 40px rgba(0, 255, 255, 0.9),
+    0 0 80px rgba(0, 255, 255, 0.6);
 }
 
 .date-month {
-  font-size: 1.2rem;
-  margin-top: 5px;
-  opacity: 0.85;
+  font-size: 2rem;
+  margin-top: 12px;
+  color: #cfffff;
+
+  text-shadow:
+    0 0 20px rgba(0, 255, 255, 1),
+    0 0 45px rgba(0, 255, 255, 0.7);
 }
 
-/* Right time box */
+/* Right Time Section */
 .time-right {
-  border-left: 2px solid rgba(255, 255, 255, 0.3);
-  padding-left: 40px;
+  width: 60%;
+  border-left: 3px solid rgba(255, 255, 255, 0.4);
+  padding-left: 60px;
 }
 
+/* Bigger & highlighted Event Time label */
 .time-label {
   text-transform: uppercase;
-  font-size: 0.9rem;
-  opacity: 0.7;
-  letter-spacing: 1px;
+  font-size: 1.6rem;
+  opacity: 1;
+  letter-spacing: 2px;
+
+  color: #e2ffff;
+  text-shadow:
+    0 0 15px rgba(0, 255, 255, 1),
+    0 0 30px rgba(0, 255, 255, 0.7);
 }
 
+/* Bigger event time text */
 .time-text {
-  font-size: 1.5rem;
-  font-weight: 500;
-  margin-top: 5px;
+  font-size: 3.3rem;
+  font-weight: 700;
+  margin-top: 10px;
+
+  color: #ffffff;
+
+  text-shadow:
+    0 0 20px rgba(0, 255, 255, 1),
+    0 0 45px rgba(0, 255, 255, 0.8),
+    0 0 80px rgba(0, 255, 255, 0.55);
 }
 
-/* Animation */
+/* Animation for fade-in */
 @keyframes fadeIn {
   from {
     opacity: 0;

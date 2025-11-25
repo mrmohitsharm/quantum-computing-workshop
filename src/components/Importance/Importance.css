@@ -1,4 +1,4 @@
-/* Full-screen with background handled in JS */
+/* Full-screen container */
 .importance-section {
   height: 100vh;
   padding: 0 20px;
@@ -7,7 +7,6 @@
   align-items: center;
   text-align: center;
 
-  /* Background image removed from CSS */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,39 +30,53 @@
 .importance-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  max-width: 900px;
   animation: fadeInUp 1.3s ease forwards;
   opacity: 0;
 }
 
-/* Title */
+/* Title - Bigger + Highlight */
 .section-title {
-  font-size: 3rem;
-  margin-bottom: 25px;
-  letter-spacing: 2px;
-  font-weight: 700;
+  font-size: 3.8rem;         /* Increased size */
+  margin-bottom: 35px;
+  letter-spacing: 3px;
+  font-weight: 800;
+
+  text-shadow:
+    0 0 18px rgba(0, 255, 255, 0.9),
+    0 0 35px rgba(0, 255, 255, 0.6);
 }
 
-/* List */
+/* Bigger List */
 .importance-list {
-  margin-top: 15px;
-  line-height: 1.8;
-  font-size: 1.25rem;
+  margin-top: 20px;
+  line-height: 2.1;          /* More spacing */
+  font-size: 1.7rem;         /* Increased from 1.25rem → 1.7rem */
   list-style: none;
   padding: 0;
 }
 
+/* List items */
 .importance-list li {
-  margin: 12px 0;
+  margin: 15px 0;
+
   opacity: 0;
   animation: fadeIn 1s ease forwards;
+
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.6);
 }
 
-.importance-list li:nth-child(1) { animation-delay: 0.3s; }
-.importance-list li:nth-child(2) { animation-delay: 0.5s; }
-.importance-list li:nth-child(3) { animation-delay: 0.7s; }
-.importance-list li:nth-child(4) { animation-delay: 0.9s; }
-.importance-list li:nth-child(5) { animation-delay: 1.1s; }
+/* Delay for each list element */
+.importance-list li:nth-child(1) { animation-delay: 0.4s; }
+.importance-list li:nth-child(2) { animation-delay: 0.6s; }
+.importance-list li:nth-child(3) { animation-delay: 0.8s; }
+.importance-list li:nth-child(4) { animation-delay: 1s; }
+.importance-list li:nth-child(5) { animation-delay: 1.2s; }
 
 /* Animations */
 @keyframes fadeInUp {
