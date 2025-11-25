@@ -3,13 +3,12 @@
   padding: 60px 20px;
   text-align: center;
 
-  /* 🔥 Add Background Image */
-  background-image: url("C:\\Users\\mohit\\workshop\\src\\images\\image.png");
+  /* Background Image removed from here */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  /* Dark overlay to keep text readable */
+  /* Dark overlay */
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: overlay;
 
@@ -18,7 +17,7 @@
   overflow: hidden;
 }
 
-/* Neon Glow Background Like Hero */
+/* Neon Glow Circles */
 .material-section::before {
   content: "";
   position: absolute;
@@ -73,6 +72,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 /* Hover Effect */
@@ -81,4 +81,26 @@
   background: rgba(255, 255, 255, 0.15);
   border-color: #00ffe5;
   box-shadow: 0 0 10px #00ffee55;
+}
+
+/* Expandable List */
+.points-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.points-container.open {
+  max-height: 300px;
+}
+
+.points-container ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.points-container li {
+  text-align: left;
+  margin-bottom: 6px;
+  font-size: 16px;
 }

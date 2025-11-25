@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Material.css";
+import bgImage from "../../assets/image.png"; // ⭐ Import background image here
 
 export default function Material() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -39,7 +40,12 @@ export default function Material() {
   };
 
   return (
-    <section className="material-section">
+    <section
+      className="material-section"
+      style={{
+        backgroundImage: `url(${bgImage})` // ⭐ Background added here
+      }}
+    >
       <h2 className="section-title">MATERIAL THAT WILL BE DISCUSSED</h2>
 
       <div className="material-list">

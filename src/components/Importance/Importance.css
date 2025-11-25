@@ -1,4 +1,4 @@
-/* Full-screen with image background */
+/* Full-screen with background handled in JS */
 .importance-section {
   height: 100vh;
   padding: 0 20px;
@@ -7,7 +7,7 @@
   align-items: center;
   text-align: center;
 
-  background-image: url("C:\\Users\\mohit\\workshop\\src\\images\\image.png");
+  /* Background image removed from CSS */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

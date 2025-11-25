@@ -1,11 +1,16 @@
 import React from "react";
 import "./Hero.css";
 import quantumImg from "../../assets/quantum.png";
- // your 3D image
+import bgImage from "../../images/bacg.png"; // background image here
 
 export default function Hero() {
   return (
-    <section className="hero-container">
+    <section
+      className="hero-container"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
       <div className="hero-left">
         <h1 className="title">QUANTUM COMPUTING WORKSHOP</h1>
 

@@ -1,9 +1,15 @@
 import React from "react";
 import "./Importance.css";
+import bgImage from "../../images/image.png"; // background image
 
 export default function Importance() {
   return (
-    <section className="importance-section">
+    <section
+      className="importance-section"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
       <div className="importance-content">
         <h2 className="section-title">IMPORTANCE</h2>
 

@@ -1,9 +1,17 @@
 import React from "react";
 import "./DateTime.css";
+import bgImage from "../../images/image.png"; // If inside src/images
+// OR
+// const bgImage = "/images/image.png"; // If inside public/images
 
 export default function DateTime() {
   return (
-    <section className="date-time-section">
+    <section
+      className="date-time-section"
+      style={{
+        backgroundImage: `url(${bgImage})`,
+      }}
+    >
       <div className="date-card">
         <div className="date-left">
           <h3 className="date-number">12</h3>
