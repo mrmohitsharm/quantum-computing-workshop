@@ -1,24 +1,84 @@
-/* Remove all browser default spacing */
+/* Reset all default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Prevent horizontal scroll (white space on right/left) */
+/* Body & html setup */
 html, body {
   width: 100%;
-  height: 100%;
-  overflow-x: hidden !important;
-  background: #000; /* optional */
+  min-height: 100%;
+  overflow-x: hidden; /* remove horizontal scroll */
+  background: #000; /* optional background */
+  font-family: Arial, sans-serif;
 }
 
-/* Fix landing container */
+/* Landing container */
 .landing-container {
   width: 100%;
-  margin: 0;
-  padding: 0;
   max-width: 100%;
-  overflow: hidden; /* prevents any content overflow */
+  margin: 0 auto;
+  padding: 0 20px; /* horizontal padding for desktop & mobile */
+  overflow: hidden;
   position: relative;
+}
+
+/* General section styling */
+section {
+  width: 100%;
+  padding: 60px 0;
+  text-align: center;
+}
+
+/* Responsive typography */
+h1 {
+  font-size: 3rem;
+}
+p {
+  font-size: 1.2rem;
+}
+
+/* Flex container example */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* important for mobile */
+  gap: 20px; /* spacing between items */
+}
+
+/* Media queries for mobile responsiveness */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column; /* stack items vertically */
+    align-items: center;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-container {
+    padding: 0 10px;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
 }

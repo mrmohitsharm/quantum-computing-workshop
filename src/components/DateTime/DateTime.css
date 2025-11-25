@@ -5,7 +5,7 @@
   align-items: center;
   padding: 60px 20px;
 
-  height: 100vh; /* Full section height */
+  min-height: 100vh; /* full section height */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -23,10 +23,9 @@
   z-index: 0;
 }
 
-/* Main Card – Bigger + Highlight */
+/* Main Card */
 .date-card {
   width: 70%;
-  height: 70%;
   max-width: 1000px;
   padding: 60px 80px;
 
@@ -52,6 +51,7 @@
 
   position: relative;
   z-index: 2;
+  flex-wrap: wrap; /* important for mobile */
 }
 
 /* Card Hover Effect */
@@ -102,9 +102,7 @@
 .time-label {
   text-transform: uppercase;
   font-size: 1.6rem;
-  opacity: 1;
   letter-spacing: 2px;
-
   color: #e2ffff;
   text-shadow:
     0 0 15px rgba(0, 255, 255, 1),
@@ -134,5 +132,70 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .date-card {
+    padding: 50px 40px;
+    gap: 50px;
+  }
+  .date-number {
+    font-size: 6rem;
+  }
+  .date-month {
+    font-size: 1.8rem;
+  }
+  .time-text {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .date-card {
+    flex-direction: column; /* stack left & right */
+    padding: 40px 30px;
+    gap: 30px;
+  }
+  .date-left, .time-right {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    border: none;
+  }
+  .time-right {
+    padding-top: 20px;
+  }
+  .date-number {
+    font-size: 5rem;
+  }
+  .date-month {
+    font-size: 1.6rem;
+  }
+  .time-text {
+    font-size: 2.4rem;
+  }
+  .time-label {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-card {
+    padding: 30px 20px;
+    gap: 20px;
+  }
+  .date-number {
+    font-size: 3.8rem;
+  }
+  .date-month {
+    font-size: 1.2rem;
+  }
+  .time-text {
+    font-size: 1.8rem;
+  }
+  .time-label {
+    font-size: 1.2rem;
   }
 }

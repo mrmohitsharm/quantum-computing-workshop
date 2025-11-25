@@ -37,7 +37,7 @@
 
 /* Title - Bigger + Highlight */
 .section-title {
-  font-size: 3.8rem;         /* Increased size */
+  font-size: 3.8rem;         
   margin-bottom: 35px;
   letter-spacing: 3px;
   font-weight: 800;
@@ -50,8 +50,8 @@
 /* Bigger List */
 .importance-list {
   margin-top: 20px;
-  line-height: 2.1;          /* More spacing */
-  font-size: 1.7rem;         /* Increased from 1.25rem → 1.7rem */
+  line-height: 2.1;          
+  font-size: 1.7rem;         
   list-style: none;
   padding: 0;
 }
@@ -93,4 +93,42 @@
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 3rem;
+  }
+  .importance-list {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.4rem;
+  }
+  .importance-list {
+    font-size: 1.3rem;
+    line-height: 1.9;
+  }
+}
+
+@media (max-width: 480px) {
+  .importance-section {
+    padding: 0 15px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .importance-list {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  .importance-list li {
+    margin: 10px 0;
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./LandingPage/LandingPage";
-import Payment from "./components/Payment/Payment";  // <-- adjust path if needed
+import RazorpayPayment from "./components/Payment/RazorpayPayment"; // Updated import
 import "./App.css";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<LandingPage />} />
 
         {/* Payment Page */}
-        <Route path="/Payment" element={<Payment />} />
+        <Route path="/payment" element={<RazorpayPayment />} /> {/* Lowercase route */}
       </Routes>
     </BrowserRouter>
   );
