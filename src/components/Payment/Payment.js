@@ -37,7 +37,7 @@ export default function RazorpayPayment() {
           <h2 className="section-title">PAYMENT GATEWAY</h2>
           <p className="payment-text">
             Secure your spot by completing the payment.  
-            You can pay instantly by scanning the QR code below or using Card/UPI.
+            You can pay instantly by scanning the QR code below or using Card.
           </p>
 
           <ul className="payment-benefits">
@@ -49,19 +49,12 @@ export default function RazorpayPayment() {
 
           {/* Razorpay Pay Button */}
           <button onClick={handleRazorpayPayment} className="cta-btn">
-            Pay Now with Card / UPI
+            Click Here For Paynment
           </button>
         </div>
 
         {/* RIGHT QR CODE */}
-        <div className="payment-qr-box">
-          <h3 className="qr-text">Or Scan UPI QR</h3>
-          <img
-            src="/upi-qr.png" // Replace with your generated UPI QR
-            alt="UPI QR Code"
-            className="payment-qr"
-          />
-        </div>
+        
 
       </div>
     </section>

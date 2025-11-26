@@ -36,20 +36,20 @@
 .Paynment,
 .cta-btn {
   padding: 14px 35px;
-  background: linear-gradient(90deg, #0e0d0e, #080808);
+  background: linear-gradient(90deg, #151515, #080808);
   color: white;
   border: none;
   border-radius: 50px;
   font-size: 18px;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0 4px 15px rgba(18, 1, 12, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.55),
 }
 
 .Paynment:hover,
 .cta-btn:hover {
   transform: scale(1.06);
-  box-shadow: 0 0 25px rgba(6, 6, 6, 0.9);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.75);
 }
 
 /* RIGHT SIDE IMAGE */
