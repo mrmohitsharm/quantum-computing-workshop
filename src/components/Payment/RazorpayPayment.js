@@ -43,7 +43,7 @@ export default function RazorpayPayment() {
           <ul className="payment-benefits">
             <li>✔ Secure and encrypted transactions</li>
             <li>✔ Instant workshop registration</li>
-            <li>✔ Supports all UPI/Wallet apps</li>
+            <li>✔ Supports all Wallet apps</li>
             <li>✔ Safe, fast & reliable</li>
           </ul>
 

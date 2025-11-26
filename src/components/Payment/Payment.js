@@ -5,7 +5,7 @@ export default function RazorpayPayment() {
 
   const handleRazorpayPayment = () => {
     const options = {
-      key: "YOUR_RAZORPAY_KEY", // Replace with your Razorpay Test/Live key
+      key: "RjuaisCQfGn1UJ", // Replace with your Razorpay Test/Live key
       amount: 50000, // ₹500 in paise
       currency: "INR",
       name: "Quantum Workshop",
@@ -43,7 +43,7 @@ export default function RazorpayPayment() {
           <ul className="payment-benefits">
             <li>✔ Secure and encrypted transactions</li>
             <li>✔ Instant workshop registration</li>
-            <li>✔ Supports all UPI/Wallet apps</li>
+            <li>✔ Supports all Wallet apps</li>
             <li>✔ Safe, fast & reliable</li>
           </ul>
 
